@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-<table>
+<div class="container">
+    <table class="table">
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -21,5 +22,5 @@
         </tr>
         @endforeach
     </table>
-
-    @endsection
+</div>
+@endsection
