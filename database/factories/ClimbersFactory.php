@@ -20,7 +20,7 @@ class ClimbersFactory extends Factory
             'phone_number' => fake()->phoneNumber(),					
             'first_name' => fake()->firstName(),					
             'last_name' => fake()->lastName(),					
-            'age' => fake()->numberBetween(),					
+            'age' => fake()->numberBetween('18','65'),					
             'gender' => fake()->randomElement(['Male','Female']),					
             'address' => fake()->address(),					
             'email'=> fake()->unique()->safeEmail(),
