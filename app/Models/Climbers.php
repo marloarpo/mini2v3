@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Climbers extends Model
 {
-    use HasFactory;
+    protected $fillable = ['phone_number','first_name', 'last_name','email','age','gender','status','citizenship','address'];
 }
