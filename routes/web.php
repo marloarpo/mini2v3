@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClimbersController;
+use App\Http\Controllers\GuidesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/climbers', [ClimbersController::class, 'index']) ->name("climbers.index");
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/climbers', [ClimbersController::class, 'index']) ->name("climbers.index");
+Route::get('/guides', [GuidesController::class, 'index']) ->name("guides.index");

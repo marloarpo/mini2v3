@@ -10,7 +10,7 @@ class ClimbersController extends Controller
 {
     public function index()
     {
-        $data = Climbers::all();
+        $data = Climbers::paginate();
         return view('climbers.index', ['climbers' => $data]);
     }
 }

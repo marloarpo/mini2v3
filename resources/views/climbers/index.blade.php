@@ -22,5 +22,6 @@
         </tr>
         @endforeach
     </table>
+    {{$climbers->links()}}
 </div>
 @endsection
