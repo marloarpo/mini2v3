@@ -28,7 +28,7 @@ class ClimbersRequest extends FormRequest
             "age" => "required|integer|min:18|max:65",					
             "gender" => "required",					
             "address" => "required",					
-            "email"=> "required",
+            'email' => 'required|email|unique:climbers',
             "status"=> "nullable",					
             "citizenship" => "required",
         ];

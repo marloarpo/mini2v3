@@ -4,6 +4,7 @@
 
     <h1>Registration</h1>
 
+    @include('partials.error-list-footer')
     <form action="{{route('climbers.store')}}" method="POST">
         @csrf
         <div class="mb-3 col-md-4">
@@ -18,7 +19,7 @@
 
         <div class="mb-3 col-md-4">
             <label class="form-label">Email</label>
-            <input class="form-control" type="text" name="email">
+            <input class="form-control" type="text" name="email" value="{{ old('email') }}">
         </div>
 
         <div class="mb-3 col-md-4">
@@ -58,7 +59,7 @@
         <a class="btn btn-secondary" href="{{url()->previous()}}">Cancel</a>
 
     </form>
-    @include('partials.error-list-footer')
+   
     
 </div>
 @endsection
