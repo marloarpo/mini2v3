@@ -29,5 +29,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/climbers', [ClimbersController::class, 'index']) ->name("climbers.index");
 Route::get('/guides', [GuidesController::class, 'index']) ->name("guides.index");
 
-Route::get('/climbers/create', [ClimbersController::class, 'create'])->name("climbers.create");
+Route::get('/climbers/signup', [ClimbersController::class, 'create'])->name("climbers.create");
 Route::post('/climbers', [ClimbersController::class, 'store'])->name('climbers.store');
