@@ -19,6 +19,7 @@
             <td>{{$climber->age}}</td>
             <td>{{$climber->gender}}</td>
             <td>{{$climber->citizenship}}</td>
+            <td><a class="btn btn-primary" href="{{route('climbers.show', ['climber' => $climber -> id]) }}">View</a></td>
         </tr>
         @endforeach
     </table>
