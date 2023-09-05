@@ -16,6 +16,16 @@ class ClimbersController extends Controller
         return view('climbers.index', ['climbers' => $data]);
     }
 
+    public function show(Climbers $climber)
+    {
+        return view('climbers.show')->with('climbers', $climber);
+    }
+
+    public function edit(Climbers $climber)
+    {
+        return view('climbers.edit')->with('climbers', $climber);
+    }
+
     public function create()
     {
         return view("climbers.create");
