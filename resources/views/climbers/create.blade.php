@@ -23,6 +23,12 @@
         </div>
 
         <div class="mb-3 col-md-4">
+            <label class="form-label">Password:</label>
+            <input class="form-control" type="password" name="password">
+        </div>
+
+
+        <div class="mb-3 col-md-4">
             <label class="form-label">Phone Number</label>
             <input class="form-control" type="text" name="phone_number">
         </div>
