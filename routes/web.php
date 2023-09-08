@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClimbersController;
 use App\Http\Controllers\GuidesController;
+use App\Http\Controllers\HomeController;
 use FFI\CData;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,6 +24,20 @@ Route::get('/', function () {
 
 
 Auth::routes();
+
+//Route::get('home', [App\Http\Controller\HomeController::class, 'index'])->('home');
+//Normal Users Routes List
+Route::middleware(['auth', 'user-access:guest'])->group(function () {
+    Route::get('/home',[HomeController::class, 'index'])->name('guest.home');
+});
+
+Route::middleware(['auth', 'user-access:guide'])->group(function () {
+    Route::get('/guide/home',[HomeController::class, 'guideHome'])->name('guide.home');
+});
+
+Route::middleware(['auth', 'user-access:officer'])->group(function () {
+    Route::get('/officer/home',[HomeController::class, 'officerHome'])->name('officer.home');
+});
 
 //Climbers Registration Form
 //Climbers Controller -Function Create

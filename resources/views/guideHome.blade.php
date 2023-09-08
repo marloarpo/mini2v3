@@ -8,11 +8,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if(auth()->user()->is_officer == 1)
-                    <a href="{{url('officer/routes')}}">Officer</a>
-                    @else
-                    <div class="panel-heading">Welcome Viewers</div>
-                    @endif
+                    You are an Guide user.
                 </div>
             </div>
         </div>

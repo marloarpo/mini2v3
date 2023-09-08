@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +26,23 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
+    //***User Section***/
+
+    public function guestHome()
+    {
+        return view('guesttHome');
+    }
+    public function guideHome()
+    {
+        return view('guideHome');
+    }
+    
+    
+    public function officerHome()
+    {
+        return view('officerHome');
+    }
+
 }
